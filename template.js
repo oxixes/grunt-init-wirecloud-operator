@@ -186,7 +186,7 @@ exports.template = function(grunt, init, done) {
         var files = init.filesToCopy(props);
         init.addLicenseFiles(files, props.licenses);
 
-        console.log(files);
+        // console.log(files);
 
         // Actually copy (and process) files.
         init.copyAndProcess(files, props);
@@ -210,7 +210,9 @@ exports.template = function(grunt, init, done) {
         nobj.vendor = props.vendor;
         nobj.keywords = ["operator"];
         nobj.devDependencies = devDependencies;
-        init.writePackageJSON('package.json', nobj);
-
+        init.writePackageJSON('package.json', nobj, function(pkg, props) {
+            pkg.vendor = props.vendor;
+            return pkg;
+        });
     });
 };
