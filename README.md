@@ -43,7 +43,6 @@ This template creates an operator project with a structure similar to the follow
     ├── doc
     │   ├── changelog.md
     │   └── index.md
-    ├── index.html
     ├── js
     │   ├── main.js
     │   └── MyAwesomeOperator.js
