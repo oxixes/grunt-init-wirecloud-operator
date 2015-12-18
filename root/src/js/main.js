@@ -1,5 +1,13 @@
-/*globals {%= jsname %} */
-window.onload = function () {
+(function () {
+
     "use strict";
-    new {%= jsname %}();
-};
+
+    MashupPlatform.prefs.registerCallback(function (new_preferences) {
+
+    }.bind(this));
+
+    /* test-code */
+
+    /* end-test-code */
+
+})();

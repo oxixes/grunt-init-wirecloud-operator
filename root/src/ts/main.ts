@@ -1,11 +1,15 @@
-/// <reference path="{%= jsname %}"/>
+/// <reference path="../../typings/MashupPlatform/MashupPlatform.d.ts"/>
+{% if (ngsi) { %}/// <reference path="../../typings/NGSI/NGSI.d.ts"/>{% }%}
 
 "use strict";
 
 /* import-block */
-import mod = require("{%= jsname %}");
-let {%= jsname %} = mod.{%= jsname %};
+import MashupPlatform = require("MashupPlatform");
+{% if (ngsi) { %}import NGSI = require("NGSI");{% }%}
 /* end-import-block */
 
-let operator = new {%= jsname %}();
-document.addEventListener("DOMContentLoaded", () => operator.init(), false);
+export class {%= jsname %} {
+    init() {
+        console.log("Loaded!!");
+    }
+}
