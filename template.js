@@ -6,6 +6,8 @@
  * Licensed under the MIT license.
  */
 
+var path = require('path');
+
 'use strict';
 
 // Basic template description.
@@ -84,7 +86,13 @@ exports.template = function(grunt, init, done) {
         },
         init.prompt("author_name"),
         init.prompt("author_email"),
-        init.prompt("name", "short_project_name"),
+        {
+            name: "name",
+            message: "Project name",
+            default: function (value, data, done) {
+                done(null, path.basename(process.cwd()).replace(/-operator$/, ''));
+            }
+        },
         // Widget Name
         {
             name: "project_name",
