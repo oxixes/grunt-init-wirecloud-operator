@@ -13,7 +13,5 @@
     "typings/MashupPlatform/MashupPlatform-tests.ts": "{% if (!js) { %}typings/MashupPlatform/MashupPlatform-tests.ts{% }%}",
     "typings/MashupPlatform/tsconfig.json": "{% if (!js) { %}typings/MashupPlatform/tsconfig.json{% }%}",
     "typings/NGSI/NGSI.d.ts": "{% if (!js && ngsi) { %}typings/NGSI/NGSI.d.ts{% }%}",
-    "typings/NGSI/NGSI-tests.ts": "{% if (!js && ngsi) { %}typings/NGSI/NGSI-tests.ts{% }%}",
-
-    "Gruntfile.js": "{% if (isgrunt) { %}Gruntfile.js{% }%}"
+    "typings/NGSI/NGSI-tests.ts": "{% if (!js && ngsi) { %}typings/NGSI/NGSI-tests.ts{% }%}"
 }

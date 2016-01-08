@@ -129,9 +129,9 @@ exports.template = function(grunt, init, done) {
         var bowerdeps = {};
         var bowerdevDependencies = {};
         var devDependencies = {
+            "grunt": "^0.4.5",
             "mock-applicationmashup": "^0.1.3"
         };
-        props.isgrunt = true; // props.build_system === "grunt";
 
         if (!props.js) {
             devDependencies["typescript"] = "^1.5.0";
@@ -153,35 +153,33 @@ exports.template = function(grunt, init, done) {
             }
         }
 
-        if (props.isgrunt){
-            if (props.js) {
-                devDependencies["grunt-contrib-jshint"] = "^0.10.0";
-                devDependencies["grunt-jscs"] = "^1.2.0";
-            } else {
-                devDependencies["grunt-typescript"] =  "^0.7.0";
-                devDependencies["grunt-tslint"] = "^2.4.0";
-            }
-
-            if (props.jquery) {
-                devDependencies["jquery"] = "^2.1.1";
-                devDependencies["jasmine-jquery"] = "~2.1.0";
-            }
-
-            if (props.bower) {
-                devDependencies["grunt-bower-task"] = "^0.4.0";
-            }
-
-            // if test?
-            devDependencies["grunt-contrib-jasmine"] = "^0.8.1";
-            devDependencies["grunt-template-jasmine-istanbul"] = "^0.3.0";
-
-            devDependencies["grunt-jsbeautifier"] = "~0.2.10";
-            devDependencies["grunt-contrib-clean"] = "~0.6.0";
-            devDependencies["grunt-contrib-compress"] = "^0.11.0";
-            devDependencies["grunt-contrib-copy"] = "^0.8.0";
-            devDependencies["grunt-strip-code"] = "^0.1.2";
-            devDependencies["grunt-text-replace"] = "~0.4.0";
+        if (props.js) {
+            devDependencies["grunt-contrib-jshint"] = "^0.10.0";
+            devDependencies["grunt-jscs"] = "^1.2.0";
+        } else {
+            devDependencies["grunt-typescript"] =  "^0.7.0";
+            devDependencies["grunt-tslint"] = "^2.4.0";
         }
+
+        if (props.jquery) {
+            devDependencies["jquery"] = "^2.1.1";
+            devDependencies["jasmine-jquery"] = "~2.1.0";
+        }
+
+        if (props.bower) {
+            devDependencies["grunt-bower-task"] = "^0.4.0";
+        }
+
+        // if test?
+        devDependencies["grunt-contrib-jasmine"] = "^0.8.1";
+        devDependencies["grunt-template-jasmine-istanbul"] = "^0.3.0";
+
+        devDependencies["grunt-jsbeautifier"] = "~0.2.10";
+        devDependencies["grunt-contrib-clean"] = "~0.6.0";
+        devDependencies["grunt-contrib-compress"] = "^0.11.0";
+        devDependencies["grunt-contrib-copy"] = "^0.8.0";
+        devDependencies["grunt-strip-code"] = "^0.1.2";
+        devDependencies["grunt-text-replace"] = "~0.4.0";
 
         // Files to copy (and process).
         var files = init.filesToCopy(props);
