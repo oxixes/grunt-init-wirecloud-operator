@@ -17,15 +17,8 @@ exports.description = 'Create a WireCloud operator with grunt-init, including Ja
 // Template-specific notes to be displayed before question prompts.
 exports.notes = '';
 
-
 // Any existing file or directory matching this wildcard will cause a warning.
 exports.warnOn = '*';
-// exports.warnOn = '*.js';
-// exports.warnOn = '*.json';
-// exports.warnOn = 'LICENSE';
-// exports.warnOn = 'README.md';
-// exports.warnOn = 'src';
-// exports.warnOn = '*.ts';
 
 var sanitizeComparer = function sanitizeComparer(reg) {
     return function(value, data, done) {
@@ -135,7 +128,6 @@ exports.template = function(grunt, init, done) {
 
         if (!props.js) {
             devDependencies["typescript"] = "^1.5.0";
-            // console.log("Not implemented yet for typescript");
         }
 
         if (props.bower) {
@@ -174,7 +166,6 @@ exports.template = function(grunt, init, done) {
         devDependencies["grunt-contrib-jasmine"] = "^1.0.0";
         devDependencies["grunt-template-jasmine-istanbul"] = "^0.3.0";
 
-        devDependencies["grunt-jsbeautifier"] = "~0.2.10";
         devDependencies["grunt-contrib-clean"] = "~0.6.0";
         devDependencies["grunt-contrib-compress"] = "^0.11.0";
         devDependencies["grunt-contrib-copy"] = "^0.8.0";
@@ -184,8 +175,6 @@ exports.template = function(grunt, init, done) {
         // Files to copy (and process).
         var files = init.filesToCopy(props);
         init.addLicenseFiles(files, props.licenses);
-
-        // console.log(files);
 
         // Actually copy (and process) files.
         init.copyAndProcess(files, props);
