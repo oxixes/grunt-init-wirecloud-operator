@@ -74,7 +74,7 @@ exports.template = function(grunt, init, done) {
         {
             name: "jquery",
             message: "Will the project use jquery?",
-            default: "Y/n",
+            default: "y/N",
             sanitize: sanitizeComparer(/^\s*y[es\s]*/i)
         },
         init.prompt("author_name"),
