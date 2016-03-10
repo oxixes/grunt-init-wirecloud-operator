@@ -205,6 +205,7 @@ exports.template = function(grunt, init, done) {
         // Write package.json :)
         var nobj = {};
         nobj.name = props.name;
+        nobj.private = true;
         nobj.vendor = props.vendor;
         nobj.description = "This package.json file is only used for installing npm dependencies. But this is not an installable node package, but a WireCloud operator. Take a look into src/config.xml for more details about this operator"
         nobj.devDependencies = devDependencies;
