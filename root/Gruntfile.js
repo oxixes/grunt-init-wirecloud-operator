@@ -221,18 +221,21 @@ module.exports = function (grunt) {
                     }
                 }
             }
-        }{% if (wirecloud) { %},
+        },
 
         wirecloud: {
+            options: {
+                overwrite: false
+            },
             publish: {
                 file: 'dist/<%= metadata.vendor %>_<%= metadata.name %>_<%= metadata.version %>-dev.wgt'
             }
-        }{% }%}
+        }
 
     });
 
-    {% if (wirecloud) { %}grunt.loadNpmTasks('grunt-wirecloud');
-    {% }%}{% if (bower) { %}grunt.loadNpmTasks('grunt-bower-task');
+    grunt.loadNpmTasks('grunt-wirecloud');
+    {% if (bower) { %}grunt.loadNpmTasks('grunt-bower-task');
     {% }%}{% if (js){ %}grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-jasmine'); // when test?
     grunt.loadNpmTasks('grunt-jscs');{% } else { %}grunt.loadNpmTasks('grunt-tslint');
@@ -266,11 +269,10 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
-{% if (wirecloud) { %}
+
     grunt.registerTask('publish', [
         'default',
         'wirecloud'
     ]);
-{% }%}
 
 };
