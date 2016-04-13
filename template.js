@@ -172,6 +172,8 @@ exports.template = function(grunt, init, done) {
         devDependencies["grunt-strip-code"] = "^0.1.2";
         devDependencies["grunt-text-replace"] = "~0.4.0";
 
+        devDependencies["wirecloud-config-parser"] = "^0.2.0";
+
         // Files to copy (and process).
         var files = init.filesToCopy(props);
         init.addLicenseFiles(files, props.licenses);
