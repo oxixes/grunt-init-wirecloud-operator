@@ -228,7 +228,7 @@ module.exports = function (grunt) {
                 overwrite: false
             },
             publish: {
-                file: 'dist/<%= metadata.vendor %>_<%= metadata.name %>_<%= metadata.version %>-dev.wgt'
+                file: 'dist/<%= metadata.vendor %>_<%= metadata.name %>_<%= metadata.version %>.wgt'
             }
         }
 
