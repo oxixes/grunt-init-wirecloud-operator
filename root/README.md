@@ -1,10 +1,8 @@
-{%= project_name %} operator
-======================
+# {%= project_name %} operator
 
 The {%= project_name %} operator is a WireCloud operator that provides ...
 
-Build
------
+## Build
 
 Be sure to have installed [Node.js](http://node.js){% if (bower) { %} and [Bower](http://bower.io){% }%} in your system. For example, you can install it on Ubuntu and Debian running the following commands:
 
@@ -15,16 +13,10 @@ sudo apt-get install npm{% if (bower) { %}
 sudo npm install -g bower{% }%}
 ```
 
-If you want the last version of the operator, you should change to the `develop` branch:
+Install other npm dependencies by running:
 
 ```bash
-git checkout develop
-```
-
-Install other npm dependencies by running: (need root because some libraries use applications, check package.json before to be sure)
-
-```bash
-sudo npm install
+npm install
 ```
 
 For build the operator you need download grunt:
@@ -41,29 +33,13 @@ grunt
 
 If everything goes well, you will find a wgt file in the `dist` folder.
 
-## Settings
+## Documentation
 
-`Write here the preferences`
-
-## Wiring
-
-
-### Input Endpoints
-
-`Write here the input wiring endpoints`
-
-
-### Output Endpoints
-
-
-`Write here the output wiring endpoints`
-
-## Usage
-
-
-## Reference
-
-- [FIWARE Mashup](https://mashup.lab.fiware.org/)
+Documentation about how to use this operator is available on the
+[User Guide](src/doc/userguide.md). Anyway, you can find general information
+about how to use operators on the
+[WireCloud's User Guide](https://wirecloud.readthedocs.io/en/stable/user_guide/)
+available on Read the Docs.
 
 ## Copyright and License
 
