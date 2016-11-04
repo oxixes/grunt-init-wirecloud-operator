@@ -56,7 +56,7 @@ module.exports = function (grunt) {
         },
 
         eslint: {
-            widget: {
+            operator: {
                 src: 'src/js/**/*.js',
             },
             grunt: {
@@ -107,7 +107,7 @@ module.exports = function (grunt) {
         },
 
         compress: {
-            widget: {
+            operator: {
                 options: {
                     mode: 'zip',
                     archive: 'dist/<%= metadata.vendor %>_<%= metadata.name %>_<%= metadata.version %>.wgt'
@@ -121,8 +121,8 @@ module.exports = function (grunt) {
                             'css/**/*',
                             'doc/**/*',
                             'images/**/*',
-                            'index.html',
-                            {% if(!js) { %}"ts/**/*",{% }%}
+                            'index.html',{% if(!js) { %}
+                            'ts/**/*',{% }%}
                             'config.xml'
                         ]
                     },
@@ -254,7 +254,7 @@ module.exports = function (grunt) {
         'replace:exports',{% }%}
         'copy:main',
         'strip_code',
-        'compress:widget'
+        'compress:operator'
     ]);
 
     grunt.registerTask('default', [{% if (!js) { %}
