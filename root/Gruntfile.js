@@ -55,18 +55,12 @@ module.exports = function (grunt) {
             }
         },
 
-        jscs: {
+        eslint: {
             widget: {
                 src: 'src/js/**/*.js',
-                options: {
-                    config: ".jscsrc"
-                }
             },
             grunt: {
                 src: 'Gruntfile.js',
-                options: {
-                    config: ".jscsrc"
-                }
             }
         },{% } else { %}typescript: {
             base: {
@@ -238,7 +232,7 @@ module.exports = function (grunt) {
     {% if (bower) { %}grunt.loadNpmTasks('grunt-bower-task');
     {% }%}{% if (js){ %}grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-jasmine'); // when test?
-    grunt.loadNpmTasks('grunt-jscs');{% } else { %}grunt.loadNpmTasks('grunt-tslint');
+    grunt.loadNpmTasks('gruntify-eslint');{% } else { %}grunt.loadNpmTasks('grunt-tslint');
     grunt.loadNpmTasks('grunt-typescript');{% }%}
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-copy');
@@ -250,7 +244,7 @@ module.exports = function (grunt) {
         'bower:install',{% }%}{% if (js) { %}
         'jshint',
         'jshint:grunt',
-        'jscs',
+        'eslint',
         'jasmine:coverage'{% } else { %}
         'tslint'{% }%}
     ]);

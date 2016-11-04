@@ -146,7 +146,7 @@ exports.template = function(grunt, init, done) {
 
         if (props.js) {
             devDependencies["grunt-contrib-jshint"] = "^0.10.0";
-            devDependencies["grunt-jscs"] = "^1.2.0";
+            devDependencies["gruntify-eslint"] = "^3.1.0";
         } else {
             devDependencies["grunt-typescript"] =  "^0.7.0";
             devDependencies["grunt-tslint"] = "^2.4.0";
