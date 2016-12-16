@@ -19,7 +19,7 @@ Install other npm dependencies by running:
 npm install
 ```
 
-For build the operator you need download grunt:
+In order to build this operator you need to download grunt:
 
 ```bash
 sudo npm install -g grunt-cli
