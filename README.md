@@ -44,8 +44,7 @@ This template creates an operator project with a structure similar to the follow
     │   ├── changelog.md
     │   └── index.md
     ├── js
-    │   ├── main.js
-    │   └── MyAwesomeOperator.js
+    │   └── main.js
     └── test
         ├── fixtures
         │   └── index.html
