@@ -102,8 +102,7 @@ module.exports = function (grunt) {
                             'DESCRIPTION.md',
                             'css/**/*',
                             'doc/**/*',
-                            'images/**/*',
-                            'index.html',{% if(!js) { %}
+                            'images/**/*',{% if(!js) { %}
                             'ts/**/*',{% }%}
                             'config.xml'
                         ]
