@@ -121,7 +121,7 @@ exports.template = function(grunt, init, done) {
         var bowerdeps = {};
         var bowerdevDependencies = {};
         var devDependencies = {
-            "grunt": "^0.4.5",
+            "grunt": "^1.0.1",
             "mock-applicationmashup": "^0.1.3"
         };
 
@@ -164,10 +164,10 @@ exports.template = function(grunt, init, done) {
         devDependencies["grunt-contrib-jasmine"] = "^1.0.0";
         devDependencies["grunt-template-jasmine-istanbul"] = "^0.3.0";
 
-        devDependencies["grunt-contrib-clean"] = "~0.6.0";
-        devDependencies["grunt-contrib-compress"] = "^0.11.0";
+        devDependencies["grunt-contrib-clean"] = "^1.1.0";
+        devDependencies["grunt-contrib-compress"] = "^1.4.3";
         devDependencies["grunt-contrib-copy"] = "^0.8.0";
-        devDependencies["grunt-strip-code"] = "^0.1.2";
+        devDependencies["grunt-strip-code"] = "^1.0.6";
         devDependencies["grunt-text-replace"] = "~0.4.0";
 
         devDependencies["grunt-wirecloud"] = "^0.9.0";
