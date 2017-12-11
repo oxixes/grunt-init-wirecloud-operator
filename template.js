@@ -122,7 +122,7 @@ exports.template = function(grunt, init, done) {
         var bowerdevDependencies = {};
         var devDependencies = {
             "grunt": "^1.0.1",
-            "mock-applicationmashup": "^0.1.3"
+            "mock-applicationmashup": "^1.0.0-d"
         };
 
         if (!props.js) {
@@ -139,8 +139,6 @@ exports.template = function(grunt, init, done) {
                 exportsOverride["jquery"] = {
                     "js": "dist/jquery.min.js"
                 };
-                // Test with jasmine have to be checked?
-                // devDependencies["jasmine-jquery"] = "~2.0.6";
             }
         }
 
@@ -153,20 +151,26 @@ exports.template = function(grunt, init, done) {
 
         if (props.jquery) {
             devDependencies["jquery"] = "^2.1.1";
-            devDependencies["jasmine-jquery"] = "~2.1.0";
         }
 
         if (props.bower) {
             devDependencies["grunt-bower-task"] = "^0.4.0";
         }
 
-        // if test?
-        devDependencies["grunt-contrib-jasmine"] = "^1.0.0";
-        devDependencies["grunt-template-jasmine-istanbul"] = "^0.3.0";
+        // Testing dependencies
+        devDependencies["jasmine-core"] = "^2.8.0";
+        devDependencies["grunt-coveralls"] = "^1.0.1";
+        devDependencies["grunt-karma"] = "^2.0.0";
+        devDependencies["karma"] = "^1.1.0";
+        devDependencies["karma-chrome-launcher"] = "^1.0.1";
+        devDependencies["karma-coverage"] = "^1.0.0";
+        devDependencies["karma-firefox-launcher"] = "^1.0.0";
+        devDependencies["karma-jasmine"] = "^1.0.2";
+        devDependencies["karma-junit-reporter"] = "^1.2.0";
 
         devDependencies["grunt-contrib-clean"] = "^1.1.0";
         devDependencies["grunt-contrib-compress"] = "^1.4.3";
-        devDependencies["grunt-contrib-copy"] = "^0.8.0";
+        devDependencies["grunt-contrib-copy"] = "^1.0.0";
         devDependencies["grunt-strip-code"] = "^1.0.6";
         devDependencies["grunt-text-replace"] = "~0.4.0";
 
