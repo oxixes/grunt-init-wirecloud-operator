@@ -4,10 +4,12 @@
 
     "use strict";
 
-    describe("Test {%= jsname %}", function () {
+    describe("{%= jsname %}", function () {
 
         beforeAll(function () {
-            window.MashupPlatform = new MockMP.MockMP();
+            window.MashupPlatform = new MockMP({
+                type: 'operator'
+            });
         });
 
         beforeEach(function () {
