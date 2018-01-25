@@ -122,7 +122,7 @@ exports.template = function(grunt, init, done) {
         var bowerdevDependencies = {};
         var devDependencies = {
             "grunt": "^1.0.1",
-            "mock-applicationmashup": "^1.0.0-d"
+            "mock-applicationmashup": "^1.0.0-e"
         };
 
         if (!props.js) {
