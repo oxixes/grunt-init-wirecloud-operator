@@ -75,7 +75,7 @@ exports.template = function(grunt, init, done) {
             name: "jquery",
             message: "Will the project use jquery?",
             default: "y/N",
-            sanitize: sanitizeComparer(/^\s*y[es\s]*/i)
+            sanitize: sanitizeComparer(/^\s*y(es)?\s*$/i)
         },
         init.prompt("author_name"),
         init.prompt("author_email"),
@@ -116,7 +116,7 @@ exports.template = function(grunt, init, done) {
     ], function(err, props){
         var exportsOverride = {};
         props.jsname = capitalizeAndRemoveUnderscore(props.name);
-        props.bower = false; // Change way to determine bower?
+        props.bower = props.jquery; // Change way to determine bower?
         props.ngsi = false; // ??
         var bowerdeps = {};
         var bowerdevDependencies = {};
@@ -135,7 +135,7 @@ exports.template = function(grunt, init, done) {
 
             if (props.jquery) {
                 // bower
-                bowerdeps["jquery"] = null;
+                bowerdeps["jquery"] = "^3.0.0";
                 exportsOverride["jquery"] = {
                     "js": "dist/jquery.min.js"
                 };
@@ -147,10 +147,6 @@ exports.template = function(grunt, init, done) {
         } else {
             devDependencies["grunt-typescript"] =  "^0.7.0";
             devDependencies["grunt-tslint"] = "^2.4.0";
-        }
-
-        if (props.jquery) {
-            devDependencies["jquery"] = "^2.1.1";
         }
 
         if (props.bower) {
