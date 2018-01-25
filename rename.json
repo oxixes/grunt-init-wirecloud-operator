@@ -1,10 +1,8 @@
 {
     "src/js/main.js": "{% if (js) { %}src/js/main.js{% }%}",
 
-    "src/test/fixtures/index.html": "{% if (js) { %}src/test/fixtures/index.html{% }%}",
-    "src/test/helpers/empty.js": "{% if (js) { %}src/test/helpers/empty.js{% }%}",
-    "src/test/vendor": "{% if (js) { %}src/test/vendor{% }%}",
-    "src/test/js/nameSpec.js": "{% if (js) { %}src/test/js/{%= jsname %}Spec.js{% }%}",
+    "tests/helpers/empty.js": "{% if (js) { %}tests/helpers/empty.js{% }%}",
+    "tests/js/nameSpec.js": "{% if (js) { %}tests/js/{%= jsname %}Spec.js{% }%}",
 
     "src/ts/main.ts": "{% if(!js) { %}src/ts/main.ts{% }%}",
     "tslint.json": "{% if (!js) { %}tslint.json{% }%}",
