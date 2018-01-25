@@ -82,15 +82,8 @@ module.exports = function (grunt) {
         },
 
         strip_code: {
-            multiple_files: {
+            test_code: {
                 src: ['build/src/js/**/*.js']
-            },
-            imports: {
-                options: {
-                    start_comment: 'import-block',
-                    end_comment: 'end-import-block'
-                },
-                src: ['src/js/*.js']
             }
         },
 
