@@ -121,7 +121,7 @@ exports.template = function(grunt, init, done) {
         var bowerdeps = {};
         var bowerdevDependencies = {};
         var devDependencies = {
-            "grunt": "^1.0.1",
+            "grunt": "^1.0.4",
             "mock-applicationmashup": "^1.0.0-e"
         };
 
@@ -131,7 +131,7 @@ exports.template = function(grunt, init, done) {
 
         if (props.bower) {
             // initialize things only for widgets!
-            devDependencies["bower"] = "^1.8.4";
+            devDependencies["bower"] = "^1.8.8";
 
             if (props.jquery) {
                 // bower
@@ -143,7 +143,7 @@ exports.template = function(grunt, init, done) {
         }
 
         if (props.js) {
-            devDependencies["gruntify-eslint"] = "^3.1.0";
+            devDependencies["gruntify-eslint"] = "^5.0.0";
         } else {
             devDependencies["grunt-typescript"] =  "^0.7.0";
             devDependencies["grunt-tslint"] = "^2.4.0";
@@ -154,24 +154,24 @@ exports.template = function(grunt, init, done) {
         }
 
         // Testing dependencies
-        devDependencies["jasmine-core"] = "^2.8.0";
+        devDependencies["jasmine-core"] = "^3.5.0";
         devDependencies["grunt-coveralls"] = "^2.0.0";
-        devDependencies["grunt-karma"] = "^2.0.0";
-        devDependencies["karma"] = "^1.1.0";
-        devDependencies["karma-chrome-launcher"] = "^1.0.1";
-        devDependencies["karma-coverage"] = "^1.0.0";
-        devDependencies["karma-firefox-launcher"] = "^1.0.0";
-        devDependencies["karma-jasmine"] = "^1.0.2";
-        devDependencies["karma-junit-reporter"] = "^1.2.0";
+        devDependencies["grunt-karma"] = "^3.0.2";
+        devDependencies["karma"] = "^4.4.1";
+        devDependencies["karma-chrome-launcher"] = "^3.1.0";
+        devDependencies["karma-coverage"] = "^2.0.1";
+        devDependencies["karma-firefox-launcher"] = "^1.2.0";
+        devDependencies["karma-jasmine"] = "^2.0.1";
+        devDependencies["karma-junit-reporter"] = "^2.0.1";
 
-        devDependencies["grunt-contrib-clean"] = "^1.1.0";
-        devDependencies["grunt-contrib-compress"] = "^1.4.3";
+        devDependencies["grunt-contrib-clean"] = "^2.0.0";
+        devDependencies["grunt-contrib-compress"] = "^1.6.0";
         devDependencies["grunt-contrib-copy"] = "^1.0.0";
         devDependencies["grunt-strip-code"] = "^1.0.6";
         devDependencies["grunt-text-replace"] = "~0.4.0";
 
-        devDependencies["grunt-wirecloud"] = "^0.9.0";
-        devDependencies["wirecloud-config-parser"] = "^0.2.0";
+        devDependencies["grunt-wirecloud"] = "^0.9.7";
+        devDependencies["wirecloud-config-parser"] = "^0.2.2";
 
         // Files to copy (and process).
         var files = init.filesToCopy(props);
