@@ -7,7 +7,7 @@
  */
 
 var ConfigParser = require('wirecloud-config-parser');
-var parser = new ConfigParser('src/config.xml');
+var parser = new ConfigParser('src/{% if (json) { %}config.json{% } else { %}config.xml{% } %}');
 
 module.exports = function (grunt) {
 
@@ -103,8 +103,9 @@ module.exports = function (grunt) {
                             'css/**/*',
                             'doc/**/*',
                             'images/**/*',{% if(!js) { %}
-                            'ts/**/*',{% }%}
-                            'config.xml'
+                            'ts/**/*',{% }%}{% if (json) { %}
+                            "config.json",{% } else { %}
+                            "config.xml", {% } %}
                         ]
                     },
                     {

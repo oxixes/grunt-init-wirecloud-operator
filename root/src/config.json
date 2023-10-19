@@ -1,0 +1,39 @@
+{
+    "authors": [
+        {
+            "email": "{%= author_email %}",
+            "name": "{%= author_name %}"
+        }
+    ],
+    "changelog": "doc/changelog.md",
+    "default_lang": "en",
+    "description": "{%= description %}",
+    "doc": "doc/userguide.md",
+    "email": "wirecloud@conwet.com",
+    "homepage": "{%= homepage %}",
+    "image": "",
+    "smartphoneimage": "",
+    "issuetracker": "{%= bugs %}",
+    "js_files": [
+        "js/main.js"
+    ],
+    "license": "{%= licenses %}",
+    "longdescription": "DESCRIPTION.md",
+    "name": "{%= name %}",
+    "preferences": [],
+    "properties": [],
+    "requirements": [
+        {% if (ngsi) { %}
+        {
+            "name": "NGSI"
+        }
+        {% } %}
+    ],
+    "title": "{%= project_name %}",
+    "translations": {},
+    "type": "operator",
+    "vendor": "{%= vendor %}",
+    "version": "{%= version %}",
+    "wiring": {
+    }
+}
