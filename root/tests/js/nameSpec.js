@@ -6,8 +6,10 @@
 
     describe("{%= jsname %}", function () {
 
+        var MashupPlatform;
+
         beforeAll(function () {
-            window.MashupPlatform = new MockMP({
+            MashupPlatform = new MockMP({
                 type: 'operator'
             });
         });

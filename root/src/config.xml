@@ -1,6 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="{%= vendor %}" name="{%= name %}" version="{%= version %}">
 
+    <macversion>2</macversion>
+
     <details>
         <title>{%= project_name %}</title>
         <homepage>{%= homepage %}</homepage>
@@ -31,5 +33,7 @@
     <scripts>
         <script src="js/main.js"/>
     </scripts>
+
+    <entrypoint name="{%= jsname %}" />
 
 </operator>

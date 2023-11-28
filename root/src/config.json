@@ -5,6 +5,7 @@
             "name": "{%= author_name %}"
         }
     ],
+    "macversion": 2,
     "changelog": "doc/changelog.md",
     "default_lang": "en",
     "description": "{%= description %}",
@@ -17,6 +18,7 @@
     "js_files": [
         "js/main.js"
     ],
+    "entrypoint": "{%= jsname %}",
     "license": "{%= licenses %}",
     "longdescription": "DESCRIPTION.md",
     "name": "{%= name %}",

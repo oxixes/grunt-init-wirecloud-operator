@@ -10,9 +10,18 @@
 
     "use strict";
 
-    MashupPlatform.prefs.registerCallback(function (new_preferences) {
+    class {%= jsname %} {
+        constructor(MashupPlatform, extra) {
+            this.MashupPlatform = MashupPlatform;
 
-    }.bind(this));
+            MashupPlatform.prefs.registerCallback(function (new_preferences) {
+
+            }.bind(this));
+        }
+    }
+
+    // We define the class as part of the window object so that it can be instantiated by Wirecloud
+    window["{%= jsname %}"] = {%= jsname %};
 
     /* test-code */
 
