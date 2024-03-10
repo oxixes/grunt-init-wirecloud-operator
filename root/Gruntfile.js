@@ -105,7 +105,7 @@ module.exports = function (grunt) {
                             'images/**/*',{% if(!js) { %}
                             'ts/**/*',{% }%}{% if (json) { %}
                             "config.json",{% } else { %}
-                            "config.xml", {% } %}
+                            "config.xml",{% } %}
                         ]
                     },
                     {

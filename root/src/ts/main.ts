@@ -16,7 +16,7 @@ import MashupPlatform = require("MashupPlatform");
 {% if (ngsi) { %}import NGSI = require("NGSI");{% }%}
 /* end-import-block */
 
-export class {%= jsname %} {
+export class {%= entrypoint %} {
     private MashupPlatform: MashupPlatform;
     {% if (ngsi) { %}private NGSI: NGSI;{% }%}
 
@@ -33,4 +33,4 @@ export class {%= jsname %} {
 }
 
 // We define the class as part of the window object so that it can be instantiated by Wirecloud
-(<any>window)["{%= jsname %}"] = {%= jsname %};
+(<any>window)["{%= entrypoint %}"] = {%= entrypoint %};
