@@ -16,7 +16,7 @@ import MashupPlatform = require("MashupPlatform");
 {% if (ngsi) { %}import NGSI = require("NGSI");{% }%}
 /* end-import-block */
 
-export class {%= entrypoint %} {
+export class Operator {
     private MashupPlatform: MashupPlatform;
     {% if (ngsi) { %}private NGSI: NGSI;{% }%}
 
@@ -32,5 +32,4 @@ export class {%= entrypoint %} {
     }
 }
 
-// We define the class as part of the window object so that it can be instantiated by Wirecloud
-(<any>window)["{%= entrypoint %}"] = {%= entrypoint %};
+(<any>window).registerOperatorClass((<any>document).currentScript, Operator);

@@ -18,7 +18,6 @@
     "js_files": [
         "js/main.js"
     ],
-    "entrypoint": "{%= entrypoint %}",
     "license": "{%= licenses %}",
     "longdescription": "DESCRIPTION.md",
     "name": "{%= name %}",

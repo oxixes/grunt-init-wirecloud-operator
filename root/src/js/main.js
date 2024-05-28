@@ -6,13 +6,11 @@
  * Licensed under the {%= licenses.join(', ') %} license{%= licenses.length === 1 ? '' : 's' %}.
  */
 
-/* exported {%= entrypoint %} */
-
-(function () {
+(function (script) {
 
     "use strict";
 
-    class {%= entrypoint %} {
+    class Operator {
         constructor(MashupPlatform, extra) {
             this.MashupPlatform = MashupPlatform;
 
@@ -22,11 +20,10 @@
         }
     }
 
-    // We define the class as part of the window object so that it can be instantiated by Wirecloud
-    window.{%= entrypoint %} = {%= entrypoint %};
+    Wirecloud.registerOperatorClass(script, Operator);
 
     /* test-code */
 
     /* end-test-code */
 
-})();
+})(document.currentScript);
