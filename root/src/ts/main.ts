@@ -32,4 +32,4 @@ export class Operator {
     }
 }
 
-(<any>window).registerOperatorClass((<any>document).currentScript, Operator);
+(<any>window).Wirecloud.registerOperatorClass((<any>document).currentScript, Operator);

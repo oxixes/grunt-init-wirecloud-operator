@@ -6,6 +6,8 @@
  * Licensed under the {%= licenses.join(', ') %} license{%= licenses.length === 1 ? '' : 's' %}.
  */
 
+/* global Wirecloud */
+
 (function (script) {
 
     "use strict";
@@ -20,7 +22,12 @@
         }
     }
 
-    Wirecloud.registerOperatorClass(script, Operator);
+    if (!('Wirecloud') in window) {
+        // For testing purposes
+        window.Operator = Operator;
+    } else {
+        Wirecloud.registerOperatorClass(script, Operator);
+    }
 
     /* test-code */
 
