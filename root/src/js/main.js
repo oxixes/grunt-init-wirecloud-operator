@@ -22,7 +22,7 @@
         }
     }
 
-    if (!('Wirecloud') in window) {
+    if (!('Wirecloud' in window)) {
         // For testing purposes
         window.Operator = Operator;
     } else {
